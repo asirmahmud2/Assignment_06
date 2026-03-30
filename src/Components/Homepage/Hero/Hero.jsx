@@ -5,7 +5,7 @@ import dot from '../../../assets/dot.png'
 
 const Hero = () => {
     return (
-        <div className="bg shadow-sm">
+        <div>
             <div className="hero min-h-screen container mx-auto">
                 <div className="hero-content flex-col lg:flex-row-reverse flex-1 gap-20">
                     <img
