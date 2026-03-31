@@ -6,7 +6,7 @@ import Cart from '../Cart/Cart';
 
 const Products = ({ productsPromise, addCart, setaddCart }) => {
     const products = use(productsPromise);
-    const [isClicked, setIsClicked]= useState(false);
+    const [isClicked, setIsClicked] = useState(false);
 
     return (
         <div>
@@ -17,20 +17,22 @@ const Products = ({ productsPromise, addCart, setaddCart }) => {
                 </div>
                 <div className="flex justify-center mt-10">
                     <div className="flex bg-gray-200 rounded-full p-1 w-fit">
-                        <button onClick={()=>setIsClicked(false)} 
-                        className="btn px-6 py-2 rounded-full text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] shadow-md">
+                        <button onClick={() => setIsClicked(false)}
+                            className={`btn px-6 py-2 rounded-full shadow-md 
+                        ${isClicked ? "text-gray-700" : "text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]"}`}>
                             Products
                         </button>
-                        <button onClick={()=>setIsClicked(true)}
-                        className="btn px-6 py-2 rounded-full text-gray-700">
+                        <button onClick={() => setIsClicked(true)}
+                            className={`btn px-6 py-2 rounded-full shadow-md 
+                        ${isClicked ? "text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "text-gray-700"}`}>
                             Cart ({addCart.length})
                         </button>
                     </div>
                 </div>
 
                 {
-                    isClicked? <Cart addCart={addCart} setaddCart={setaddCart}></Cart>
-                    :<ProductTab products={products} addCart={addCart} setaddCart={setaddCart}></ProductTab>
+                    isClicked ? <Cart addCart={addCart} setaddCart={setaddCart}></Cart>
+                        : <ProductTab products={products} addCart={addCart} setaddCart={setaddCart}></ProductTab>
                 }
             </div>
         </div>
