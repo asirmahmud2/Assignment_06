@@ -1,49 +1,115 @@
 import React from 'react';
+import { IoIosCheckmark } from "react-icons/io";
 
 const Pricing = () => {
     return (
         <div>
-            <div className='container mx-auto text-center p-20 space-y-3'>
-                <h2 className='text-4xl font-bold'>Simple, Transparent Pricing</h2>
-                <p className='text-gray-400 '>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
-            </div>
-            <div className='flex justify-center gap-5 mt-10'>
-                <div>
-                    <div className="card bg-base-100 shadow-sm">
+            <div className='container mx-auto p-20 space-y-3'>
+                <div className="text-center">
+                    <h2 className='text-4xl font-bold'>Simple, Transparent Pricing</h2>
+                    <p className='text-gray-400 '>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+                </div>
+
+
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
+                    <div className="card w-full h-full bg-base-100 shadow-sm">
                         <div className="card-body">
-                            <span className="badge badge-xs badge-warning">Most Popular</span>
-                            <div className="flex justify-between">
-                                <h2 className="text-3xl font-bold">Premium</h2>
-                                <span className="text-xl">$29/mo</span>
-                            </div>
-                            <ul className="mt-6 flex flex-col gap-2 text-xs">
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span>High-resolution image generation</span>
+                            <h2 className="text-3xl font-bold">Starter</h2>
+                            <p className='text-gray-500 grow-0'>Perfect for getting started</p>
+                            <span className="text-xl mt-5 mb-5 text-left"><span className='text-4xl font-bold text-left'>$0</span>/month</span>
+                            <ul className='grow'>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Access to 10 free tools</span>
                                 </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span>Customizable style templates</span>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Basic templates</span>
                                 </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span>Batch processing capabilities</span>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Community support</span>
                                 </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span>AI-driven image enhancements</span>
-                                </li>
-                                <li className="opacity-50">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span className="line-through">Seamless cloud integration</span>
-                                </li>
-                                <li className="opacity-50">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span className="line-through">Real-time collaboration tools</span>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>1 project per month</span>
                                 </li>
                             </ul>
                             <div className="mt-6">
-                                <button className="btn btn-primary btn-block">Subscribe</button>
+                                <button className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] border-none w-full text-white">Get Started Free</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card w-full bg-base-100 shadow-sm relative bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">
+                        <div className="card-body">
+                            <span className="badge badge-lg badge-warning absolute -top-2 left-35 rounded-full">Most Popular</span>
+                            <h2 className="text-3xl font-bold">Pro</h2>
+                            <p>Best for professionals</p>
+                            <span className="text-xl mt-5 mb-5"><span className='text-4xl font-bold'>$29</span>/month</span>
+                            <ul>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Access to all premium tools</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Unlimited templates</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Priority support</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Unlimited projects</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Cloud sync</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Advanced analytics</span>
+                                </li>
+                            </ul>
+                            <div className="mt-6">
+                                <button className="btn rounded-full bg-white border-none w-full text-blue-500">Start Pro Trial</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card w-full h-full bg-base-100 shadow-sm">
+                        <div className="card-body">
+                            <h2 className="text-3xl font-bold">Enterprise</h2>
+                            <p className='text-gray-500 grow-0'>For teams and businesses</p>
+                            <span className="text-xl mt-5 mb-5 text-left"><span className='text-4xl font-bold text-left'>$99</span>/month</span>
+                            <ul className='grow'>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Everything in Pro</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Team collaboration</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Custom integrations</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Dedicated support</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>SLA guarantee</span>
+                                </li>
+                                <li className='flex items-center'>
+                                    <span className="text-4xl text-success"><IoIosCheckmark /></span>
+                                    <span>Custom branding</span>
+                                </li>
+                            </ul>
+                            <div className="mt-6">
+                                <button className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] border-none w-full text-white">Contact Sales</button>
                             </div>
                         </div>
                     </div>

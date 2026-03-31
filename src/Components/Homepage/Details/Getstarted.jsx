@@ -11,7 +11,7 @@ const Getstarted = () => {
                 <p className='text-gray-400 '>Start using premium digital tools in minutes, not hours.</p>
 
 
-                <div className='flex justify-center gap-5 mt-10'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
                     <div className="card bg-base-100 p-5 shadow-sm relative">
                         <span className="bg-blue-400 w-8 h-8 flex items-center justify-center rounded-full text-white text-right absolute right-5 mb-5">
                             01
