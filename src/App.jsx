@@ -21,11 +21,11 @@ function App() {
       <Navbar addCart={addCart}></Navbar>
       <Hero></Hero>
       <Rating></Rating>
-      <Getstarted></Getstarted>
-      <Pricing></Pricing>
       <Suspense>
         <Products productsPromise={productsPromise} setaddCart={setaddCart} addCart={addCart}></Products>
       </Suspense>
+      <Getstarted></Getstarted>
+      <Pricing></Pricing>
     </>
   )
 }
