@@ -10,7 +10,8 @@
       "50+ writing templates",
       "Grammar checker"
     ],
-    "buttonText": "Buy Now"
+    "buttonText": "Buy Now",
+    "img": "/products/writing_2327400 1.png"
   },
   {
     "title": "Design Templates Pack",
@@ -23,7 +24,8 @@
       "Monthly updates",
       "Commercial license"
     ],
-    "buttonText": "Buy Now"
+    "buttonText": "Buy Now",
+    "img": "/products/design-tool.png"
   },
   {
     "title": "Premium Stock Assets",
@@ -36,7 +38,8 @@
       "Commercial use",
       "No attribution"
     ],
-    "buttonText": "Buy Now"
+    "buttonText": "Buy Now",
+    "img": "/products/portfolio.png"
   },
   {
     "title": "Automation Toolkit",
@@ -49,7 +52,8 @@
       "API access",
       "Custom workflows"
     ],
-    "buttonText": "Buy Now"
+    "buttonText": "Buy Now",
+    "img": "/products/operation.png"
   },
   {
     "title": "Resume Builder Pro",
@@ -62,7 +66,8 @@
       "ATS optimization",
       "Export to PDF"
     ],
-    "buttonText": "Buy Now"
+    "buttonText": "Buy Now",
+    "img": "/products/writing_2327400 1.png"
   },
   {
     "title": "Social Media Content Kit",
@@ -75,6 +80,7 @@
       "Scheduler included",
       "Analytics dashboard"
     ],
-    "buttonText": "Buy Now"
+    "buttonText": "Buy Now",
+    "img": "/products/social-media.png"
   }
 ]
