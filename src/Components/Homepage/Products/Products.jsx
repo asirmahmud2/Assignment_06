@@ -2,7 +2,7 @@ import React from 'react';
 import { use } from 'react';
 import Card from './Card';
 
-const Products = ({ productsPromise }) => {
+const Products = ({ productsPromise , addCart, setaddCart }) => {
     const products = use(productsPromise);
 
     return (
@@ -18,7 +18,7 @@ const Products = ({ productsPromise }) => {
                             Products
                         </button>
                         <button className="btn px-6 py-2 rounded-full text-gray-700">
-                            Cart (2)
+                            Cart ({addCart.length})
                         </button>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ const Products = ({ productsPromise }) => {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
                     {
                         products.map(product => {
-                            return <Card key={product.price} product={product}></Card>
+                            return <Card key={product.price} product={product} addCart={addCart} setaddCart={setaddCart}></Card>
                         })
                     }
                 </div>

@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Getstarted from './Components/Homepage/Details/Getstarted'
 import Pricing from './Components/Homepage/Details/Pricing'
@@ -14,16 +14,17 @@ const fetchPlayer = async () => {
 
 function App() {
   const productsPromise = fetchPlayer();
+  const [addCart, setaddCart] = useState([]);
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar addCart={addCart}></Navbar>
       <Hero></Hero>
       <Rating></Rating>
       <Getstarted></Getstarted>
       <Pricing></Pricing>
       <Suspense>
-        <Products productsPromise={productsPromise}></Products>
+        <Products productsPromise={productsPromise} setaddCart={setaddCart} addCart={addCart}></Products>
       </Suspense>
     </>
   )

@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoIosCheckmark } from "react-icons/io";
 
-const Card = ({ product }) => {
+const Card = ({ product, addCart, setaddCart }) => {
 
-    const badgeDesign = ()=>{
-        if(product.badge=='New')
+    const [isSelected, setIsSelected] = useState(false);
+    const badgeDesign = () => {
+        if (product.badge == 'New')
             return "text-[#0A883E] bg-[#DBFCE7]";
-        else if(product.badge=='Popular')
+        else if (product.badge == 'Popular')
             return "text-blue-400 bg-[#E1E7FF]";
         else
             return "text-[#BB4D00] bg-[#FEF3C6]";
-            
+    }
+
+    const addToCart = () => {
+        setIsSelected(true);
+        setaddCart([...addCart, product]);
     }
     return (
         <div className="card w-full h-full bg-base-100 shadow-sm relative">
             <div className="card-body">
-                <span className={ `badge badge-lg absolute top-3 right-3 rounded-full 
+                <span className={`badge badge-lg absolute top-3 right-3 rounded-full 
                     ${badgeDesign()}`}>{product.badge}</span>
 
                 <div className=" p-2 rounded-full border-2 border-gray-100 w-fit">
@@ -35,7 +40,13 @@ const Card = ({ product }) => {
                     }
                 </ul>
                 <div className="mt-6">
-                    <button className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] border-none w-full text-white">Buy Now</button>
+                    <button
+                        onClick={() => addToCart()} disabled={isSelected}
+                        className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] border-none w-full text-white">
+                        {
+                            isSelected ? "Added To Cart" : "Buy Now"
+                        }
+                    </button>
                 </div>
             </div>
         </div>
