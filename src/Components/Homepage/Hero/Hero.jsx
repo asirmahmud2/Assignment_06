@@ -1,6 +1,6 @@
 import React from 'react';
 import banner from '../../../assets/banner.png'
-import play from '../../../assets/play.png'
+import play from '../../../assets/Play.png'
 import dot from '../../../assets/dot.png'
 
 const Hero = () => {
