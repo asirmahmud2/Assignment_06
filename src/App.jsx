@@ -6,6 +6,8 @@ import Hero from './Components/Homepage/Hero/Hero'
 import Rating from './Components/Homepage/Hero/Rating'
 import Navbar from './Components/Homepage/Navbar/Navbar'
 import Products from './Components/Homepage/Products/Products'
+import Join from './Components/Homepage/Details/Join'
+import Footer from './Components/Homepage/Details/Footer'
 
 const fetchPlayer = async () => {
   const res = await fetch("/product.json");
@@ -26,6 +28,8 @@ function App() {
       </Suspense>
       <Getstarted></Getstarted>
       <Pricing></Pricing>
+      <Join></Join>
+      <Footer></Footer>
     </>
   )
 }
