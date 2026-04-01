@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoIosCheckmark } from "react-icons/io";
+import { toast } from 'react-toastify';
 
 const Card = ({ product, addCart, setaddCart }) => {
 
@@ -20,6 +21,7 @@ const Card = ({ product, addCart, setaddCart }) => {
 
     const addToCart = () => {
         setaddCart([...addCart, product]);
+        toast.success("Item Added To Cart");
     }
     return (
         <div className="card w-full h-full bg-base-100 shadow-sm relative">

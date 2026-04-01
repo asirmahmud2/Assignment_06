@@ -1,5 +1,6 @@
 import React from 'react';
 import { CiShoppingCart } from "react-icons/ci";
+import { toast } from 'react-toastify';
 
 const Cart = ({ addCart, setaddCart }) => {
     const calculateTotal = () => {
@@ -12,16 +13,17 @@ const Cart = ({ addCart, setaddCart }) => {
     const handleRemove = (product) => {
         const newCart = addCart.filter(ele => ele.price !== product.price);
         setaddCart(newCart);
+        toast.error("Item removed form Cart");
     }
     return (
         <div className="bg-white rounded-xl p-10 shadow-[0_8px_30px_rgba(0,0,0,0.08)] space-y-5">
             <h2 className='font-bold text-2xl'>Your Cart</h2>
-            {   addCart.length==0? 
-                    <div className="text-center text-gray-500 bg-gray-100 p-20 rounded-xl text-4xl">
-                        <span className='text-8xl flex items-center justify-center'><CiShoppingCart /></span>
-                        <p >Your cart is empty</p>
-                    </div>
-                :(
+            {addCart.length == 0 ?
+                <div className="text-center text-gray-500 bg-gray-100 p-20 rounded-xl text-4xl">
+                    <span className='text-8xl flex items-center justify-center'><CiShoppingCart /></span>
+                    <p >Your cart is empty</p>
+                </div>
+                : (
                     addCart.map(product => {
                         return <div className='bg-gray-100 p-5 rounded-xl flex justify-between items-center'>
                             <div className='flex gap-4 items-center'>
@@ -45,8 +47,12 @@ const Cart = ({ addCart, setaddCart }) => {
                 <p className='text-gray-500'>Total</p>
                 <p className='font-bold text-xl'>$ {calculateTotal()}</p>
             </div>
-            <button onClick={() => setaddCart([])} disabled={addCart.length==0}
-             className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] border-none w-full text-white">Proceed to Checkout</button>
+            <button onClick={() =>
+             { 
+                setaddCart([]);
+                toast.info("Checkout Confirmed");
+            }} disabled={addCart.length == 0}
+                className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] border-none w-full text-white">Proceed to Checkout</button>
         </div>
     );
 };
