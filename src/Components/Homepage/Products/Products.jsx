@@ -10,7 +10,7 @@ const Products = ({ productsPromise, addCart, setaddCart }) => {
 
     return (
         <div>
-            <div className='container mx-auto p-20 space-y-3'>
+            <div className='container mx-auto p-7 md:p-10 lg:p-20 space-y-3'>
                 <div className="text-center">
                     <h2 className='text-4xl font-bold mb-3'>Premium Digital Tools</h2>
                     <p className='text-gray-400 '>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>

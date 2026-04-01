@@ -13,9 +13,9 @@ const fetchPlayer = async () => {
   const res = await fetch("/product.json");
   return res.json();
 }
+const productsPromise = fetchPlayer();
 
 function App() {
-  const productsPromise = fetchPlayer();
   const [addCart, setaddCart] = useState([]);
 
   return (

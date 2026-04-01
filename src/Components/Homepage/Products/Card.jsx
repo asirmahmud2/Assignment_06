@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IoIosCheckmark } from "react-icons/io";
 
 const Card = ({ product, addCart, setaddCart }) => {
 
-    const [isSelected, setIsSelected] = useState(false);
+    let isSelected = false;
+    addCart.forEach((item) => {
+        if (item.price === product.price) {
+            isSelected = true;
+        }
+    });
     const badgeDesign = () => {
         if (product.badge == 'New')
             return "text-[#0A883E] bg-[#DBFCE7]";
@@ -14,7 +19,6 @@ const Card = ({ product, addCart, setaddCart }) => {
     }
 
     const addToCart = () => {
-        setIsSelected(true);
         setaddCart([...addCart, product]);
     }
     return (

@@ -18,6 +18,7 @@ const Navbar = ({ addCart }) => {
                             <li><a>Pricing</a></li>
                             <li><a>Testimonials</a></li>
                             <li><a>FAQ</a></li>
+                            <li><button className='btn btn-ghost text-lg'>Login</button></li>
                         </ul>
                     </div>
                     <a className="font-bold text-3xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
@@ -36,7 +37,7 @@ const Navbar = ({ addCart }) => {
                         <button className='btn btn-ghost text-lg'><CiShoppingCart /></button>
                         <span className='bg-red-600 text-white text-sm px-2 rounded-full absolute right-1 -top-1'>{addCart.length}</span>
                     </div>
-                    <button className='btn btn-ghost text-lg'>Login</button>
+                    <button className='btn btn-ghost text-lg hidden lg:flex'>Login</button>
                     <a className="btn btn-primary rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] border-none">Get Started</a>
                 </div>
             </div>

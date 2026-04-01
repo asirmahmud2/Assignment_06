@@ -4,7 +4,7 @@ import { IoIosCheckmark } from "react-icons/io";
 const Pricing = () => {
     return (
         <div>
-            <div className='container mx-auto p-20 space-y-3'>
+            <div className='container mx-auto p-7 md:p-10 lg:p-20 space-y-3'>
                 <div className="text-center">
                     <h2 className='text-4xl font-bold'>Simple, Transparent Pricing</h2>
                     <p className='text-gray-400 '>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
